@@ -1,0 +1,253 @@
+/* ----- import google font -----  */
+@font-face {
+    font-family: newfont;
+    src: url("fonts/Monday-Personal Use.otf");
+    font-style: italic;
+}
+
+
+/* --------- pages ---------------*/
+html, body{
+  height: 100vh;
+  width: 100vw;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: newfont, serif;
+
+}
+
+
+#container{
+   min-height: 100%;
+   position: relative;
+   margin: 0px;
+   padding: 0px;
+   display: flex;
+   flex-direction: column;
+}
+
+#box{
+flex-shrink: 0;
+}
+
+/*   -------header-----------   */
+header {
+    width: 100vw;
+    background-color: rgb(94, 193, 250);
+    height: 50px;
+}
+
+nav{
+    width: 100vw;
+    color: brown;
+    height: 50px;
+    align-content: center;
+}
+
+.logo{
+    float: left;
+    font-style: italic;
+    margin-left: 50px;
+    margin-top: 10px;
+}
+
+nav::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+ul{
+    margin: auto 50px auto auto; 
+    padding: 0px;
+    width: 75vw;
+}
+
+li{
+    float: right;
+    list-style: none;
+    height: 40px; 
+}
+
+a{
+    display: inline-block;
+    text-decoration: none;
+    padding: 15px;
+    color: brown;
+    margin: auto;
+}
+
+input{
+    display: none;
+}
+
+nav label{
+    display: none;
+}
+
+li:hover{
+    background-color: rgba(000, 112, 192, 0.25);
+    height: 50px;
+}
+
+
+/* -----------hero section ----------  */
+#hero{
+    background-image: url(images/hero.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 60vh;
+    width: 100vw;
+    margin: 0 auto 20px auto;
+    display: flex;
+    align-items: center;
+}
+
+h1{
+    width: 100%;
+    text-align: left;
+    margin: auto;
+    color: red;
+}
+
+#hero-text{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    min-width: 50vw;
+    font-size: 2.2em;
+    color: red;
+}
+
+/*    -------about section------  */
+#about{
+    width: 90vw;
+    margin: auto auto 60px auto; 
+}
+
+
+/* ----- Royal family --------  */
+#royal-family{
+    width: 50vw;
+    min-width: 30vw;
+    margin: auto;
+}
+
+#royal-family-text{
+    margin-left: 50px;
+}
+
+#royal-family-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    flex-wrap: wrap;
+    font-size: 1.5em;  
+}
+
+#king, #princess, #queen{
+    flex: 1;
+    text-align: center;
+}
+
+
+/* ------- Assets------------- */
+#assets{
+    width: 80vw;
+    margin: auto;
+    height: 100vh;
+}
+
+
+td{
+    border: 1px solid black;
+    height: 15px;
+}
+
+table{
+    border-collapse: collapse;
+    width: 80vw;
+    text-align: center;
+}
+
+/* ------ contact-us ------ */
+form{
+        width: 80vw;
+        margin: auto;
+        height: 100vh;
+
+}
+
+.label-contact{
+        display: inline-block;
+        width: 80vw;
+        text-align: left;
+        margin: 10px auto;
+}
+
+.input-contact{
+        width: 80vw; 
+        box-sizing: border-box;
+        text-align: left;
+        border: 1px solid black;
+        height: 40px;
+        display: inline;
+}
+
+#button-message{
+        margin-top: 10px;
+        float: right;  
+}
+
+#message{
+        height: 150px;
+}
+
+/*   --------- footer------- */
+footer{
+    text-align: center;
+    border: 1px black solid;
+    position: absolute;
+    width: 100vw;
+    height: 20px;
+    color: red;
+    background-color: rgb(94, 193, 250);
+    bottom: 0;
+    flex-shrink: 0;
+   
+}
+
+
+/* media queries for responsive menu  */
+@media screen and (max-width: 576px){
+        .responsive-menu{
+            display: block;
+            color: white;
+            background-color: rgb(94, 193, 250);
+            text-align: center;
+            padding: 15px;
+            margin: auto;  
+        }
+
+        ul{
+            display: none;
+            width: 100vw;
+        }
+
+        input:checked ~ ul{
+            display: block;
+        }
+
+        li, a{
+            width: 100vw;
+            text-align: center;
+            background-color: rgba(94, 193, 250, 0.15);
+        }
+
+        a, nav ul li:hover a{
+            padding: 10px 0px;
+        }
+}
